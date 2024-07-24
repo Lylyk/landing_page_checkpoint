@@ -1,0 +1,252 @@
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(241, 223, 226);
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  .nav-logo a img {
+    max-width: 80px;
+    margin-left: 80px;
+  }
+  
+  .add-logo a img {
+    width: 50px;
+    padding-right: 40px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 10px;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .hero {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/hero-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: static;
+    margin-top: 80px; /* Adjust to ensure content below the fixed header */
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  #product-section {
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-right: 10%;
+  }
+  
+  .product-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .product-card {
+    width: 30%;
+    height: 30%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .product-title {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .product-description {
+    margin: 10px 0;
+  }
+  
+  .product-price {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .banner {
+    margin-top: 100px;
+    width: 100%;
+    height: 150px;
+    background-image: url(banner.jpg);
+    background-size: cover;
+  }
+  
+  /* Hide checkbox */
+  #menu-toggle {
+    display: none;
+  }
+  
+  /* Style for the hamburger icon */
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    margin-right: 40px;
+  }
+  
+  /* Show the hamburger icon and hide nav items on small screens */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-items {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    #menu-toggle:checked + .menu-toggle + .nav-items {
+      display: flex;
+    }
+  
+    .add-logo {
+      margin-top: 1rem;
+    }
+  
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .hero-text button {
+      font-size: 0.875rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .product-card {
+      width: 100%;
+      height: auto;
+    }
+  
+    .product-section {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+
+  
+  .footer-basic {
+    padding:40px 0;
+    background-color:#ffffff;
+    color:#4b4c4d;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
